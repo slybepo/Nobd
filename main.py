@@ -10,5 +10,5 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'We have logged in as {bot.user}')
     await bot.change_presence(activity=discord.Streaming(name='streaming-name', url='https://www.twitch.tv/urtwitchusername'))
-
-bot.run('YOUR_BOT_TOKEN')
+token = env.TOKEN
+bot.run('token')
